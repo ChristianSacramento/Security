@@ -36,6 +36,11 @@ namespace Microsoft.AspNetCore.Authentication.OpenIdConnect
         Task RedirectToIdentityProviderForSignOut(RedirectContext context);
 
         /// <summary>
+        /// Invoked before redirecting to the post logout redirect uri.
+        /// </summary>
+        Task RedirectToPostLogoutRedirectUri(RedirectContext context);
+
+        /// <summary>
         /// Invoked when a request is received on the RemoteSignOutPath.
         /// </summary>
         Task RemoteSignOut(RemoteSignOutContext context);
